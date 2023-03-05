@@ -13,6 +13,7 @@ const Error = lazy(() => import("./components/pages/Error"));
 
 import { Route, Routes } from "react-router-dom";
 import ContactUs from "./components/pages/ContactUs";
+import Products from "./components/pages/Products";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/store" element={<Store />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/products/:productId" element={<Products />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Suspense>

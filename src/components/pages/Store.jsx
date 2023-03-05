@@ -6,7 +6,7 @@ import AuthContext from "../store/auth-context";
 import ModalContext from "../store/modal-context";
 import StoreDataList from "../dataLists/StoreDataList";
 
-const STOREDATA = [
+export const STOREDATA = [
   {
     id: "a101",
     title: "Colors",

@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import CartContext from "../store/cart-context";
 
 import styles from "../pages/Store.module.css";
+import { Link } from "react-router-dom";
 
 function StoreDataList(props) {
   const { addItem } = useContext(CartContext);
@@ -19,12 +20,14 @@ function StoreDataList(props) {
         style={{ width: "16rem" }}
         className={`m-auto ${styles["myCards-image"]}`}
       >
-        <img
-          variant="top"
-          src={props.url}
-          style={{ width: "16rem" }}
-          alt={props.title}
-        />
+        <Link to={`/products/${props.id}`}>
+          <img
+            variant="top"
+            src={props.url}
+            style={{ width: "16rem" }}
+            alt={props.title}
+          />
+        </Link>
       </div>
       <div className="d-flex align-items-center justify-content-between my-3">
         <p style={{ fontFamily: "serif", paddingTop: "12px" }}>
