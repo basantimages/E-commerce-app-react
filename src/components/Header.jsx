@@ -34,6 +34,9 @@ function Header() {
           <NavLink className="btn btn-primary mr-3" to="/about">
             About
           </NavLink>
+          <NavLink className="btn btn-primary mr-3" to="/contact">
+            Contact Us
+          </NavLink>
         </Nav>
         {isLoggedIn && loc.pathname === "/store" && (
           <Button
